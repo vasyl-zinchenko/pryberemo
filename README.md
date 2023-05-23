@@ -7,5 +7,5 @@ The site was created using:
 - Vue 3 Composition API
 - html, scss
 
-<p><img src=""></p>
+<p><img src="https://github.com/vasyl-zinchenko/pryberemo/blob/main/src/assets/redlab.jpg?raw=true"></p>
 
