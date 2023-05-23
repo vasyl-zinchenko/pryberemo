@@ -73,7 +73,7 @@ img {
 
   align-content: stretch;
   text-align: center;
-  transition: transform 0.6s;
+  transition: transform 0.6s ;
   transform-style: preserve-3d;
 }
 

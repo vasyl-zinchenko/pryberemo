@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="block"
-    :class="{ visible: isHidenIcon, hidden: !isHidenIcon }"
-  >
+  <div class="block" :class="{ visible: isHidenIcon, hidden: !isHidenIcon }">
     <span
       class="block__text"
       :class="{ visible: isHovered, hidden: !isHovered }"
@@ -43,7 +40,8 @@ onMounted(() => {
   background: #5a30f0;
   border-radius: 50%;
   cursor: pointer;
-  transition: 0.3s;
+  box-shadow: 0px 0px 0px 8px rgba(90, 48, 240, 0.3);
+  animation: 1s linear 0s infinite alternate border-change;
 
   &:hover {
     transform: rotate(45deg);
@@ -90,5 +88,15 @@ onMounted(() => {
 
 .icon:hover + .block__text {
   visibility: visible;
+}
+
+@keyframes border-change {
+  from {
+    box-shadow: 0px 0px 0px 8px rgba(90, 48, 240, 0.3);
+  }
+  to {
+    /* returns the sun to its default position */
+    box-shadow: 0px 0px 0px 11px rgba(90, 48, 240, 0.3);
+  }
 }
 </style>

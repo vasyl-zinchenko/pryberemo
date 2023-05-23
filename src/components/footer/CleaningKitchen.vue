@@ -1,47 +1,18 @@
 <template>
-  <div class="info" v-for="item in items" :key="item.id">
+  <div class="info" v-for="item in store.kitchenItems" :key="item.id">
     <BaseInfoIcon :item="item" />
   </div>
   <img :src="getImage" alt="kitchen" />
 </template>
 
 <script setup>
+import { useGeneralStore } from "../../store";
 import BaseInfoIcon from "../ui/BaseInfoIcon.vue";
+const store = useGeneralStore();
 
 defineProps({
   getImage: String,
 });
-
-const items = [
-  {
-    id: 1,
-    text: "Чистимо фасад витяжки",
-  },
-  {
-    id: 2,
-    text: "Чистимо плиту",
-  },
-  {
-    id: 3,
-    text: "Виносимо сміття",
-  },
-  {
-    id: 4,
-    text: "Чистимо фасади кухонних гарнітурів",
-  },
-  {
-    id: 5,
-    text: "Протираємо стільницю",
-  },
-  {
-    id: 6,
-    text: "Миємо посуд",
-  },
-  {
-    id: 7,
-    text: "Миємо підлогу",
-  },
-];
 </script>
 
 <style lang="scss" scoped>

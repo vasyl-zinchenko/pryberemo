@@ -11,6 +11,14 @@ import bathImg from "../assets/images/footer/bathroom.png";
 
 export const useGeneralStore = defineStore("generalStore", () => {
   const isMenuVisible = ref(false);
+  const isMenuFooter = ref(false);
+	const services = reactive([
+    { id: 1, title: "Після ремонту" },
+    { id: 2, title: "Генеральне прибирання" },
+    { id: 3, title: "Регулярне прибирання" },
+    { id: 4, title: "Мийка вікон" },
+  ]);
+
   const featureItems = reactive([
     {
       id: 1,
@@ -63,5 +71,66 @@ export const useGeneralStore = defineStore("generalStore", () => {
     },
   ]);
 
-  return { featureItems, menuCleanItems, isMenuVisible };
+  const bathItems = reactive([
+    {
+      id: 1,
+      text: "Миємо дзеркала",
+    },
+    {
+      id: 2,
+      text: "Чистимо мебель",
+    },
+    {
+      id: 3,
+      text: "Чистимо туалети",
+    },
+    {
+      id: 4,
+      text: "Миємо плитку",
+    },
+    {
+      id: 4,
+      text: "Миємо ванну",
+    },
+  ]);
+
+  const kitchenItems = reactive([
+    {
+      id: 1,
+      text: "Чистимо фасад витяжки",
+    },
+    {
+      id: 2,
+      text: "Чистимо плиту",
+    },
+    {
+      id: 3,
+      text: "Виносимо сміття",
+    },
+    {
+      id: 4,
+      text: "Чистимо фасади кухонних гарнітурів",
+    },
+    {
+      id: 5,
+      text: "Протираємо стільницю",
+    },
+    {
+      id: 6,
+      text: "Миємо посуд",
+    },
+    {
+      id: 7,
+      text: "Миємо підлогу",
+    },
+  ]);
+  return {
+    featureItems,
+    menuCleanItems,
+    isMenuVisible,
+    isMenuFooter,
+    bathItems,
+    kitchenItems,
+    services,
+  };
 });

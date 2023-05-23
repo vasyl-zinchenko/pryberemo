@@ -1,6 +1,6 @@
 <template>
   <section class="footer" v-intersection-observer="onIntersectionObserver">
-    <section :class="['menu', { 'menu-visible': isMenuVisible }]">
+    <section :class="['menu', { 'menu-visible': store.isMenuFooter }]">
       <p>Як ми прибираємо</p>
       <ul>
         <li
@@ -16,7 +16,7 @@
     <div
       v-if="currentMenu.image"
       class="info-picture"
-      :class="{ 'info-picture__visible': isMenuVisible }"
+      :class="{ 'info-picture__visible': store.isMenuFooter }"
     >
       <component :is="tabs[currentMenu.tab]" :getImage="getImage"></component>
     </div>
@@ -46,14 +46,9 @@ const isMenuVisible = ref(false);
 const currentMenu = ref(store.menuCleanItems[0]);
 
 const getImage = computed(() => currentMenu.value.image);
-onMounted(() => {
-  setTimeout(() => {
-    isMenuVisible.value = true;
-  }, 500);
-});
 
 function onIntersectionObserver([{ isIntersecting }]) {
-  isMenuVisible.value = isIntersecting;
+  store.isMenuFooter = isIntersecting;
 }
 </script>
 

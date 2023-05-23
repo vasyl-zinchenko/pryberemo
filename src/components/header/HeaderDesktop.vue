@@ -11,7 +11,7 @@
       <ul class="header-menu__list">
         <li
           class="header-menu__list_item"
-          v-for="service in services"
+          v-for="service in store.services"
           :key="service.id"
         >
           {{ service.title }}
@@ -28,14 +28,10 @@
 
 <script setup>
 import { ref, reactive, onMounted } from "vue";
+import { useGeneralStore } from "../../store";
+const store = useGeneralStore();
 
 const isScrolled = ref(false);
-const services = reactive([
-  { id: 1, title: "Після ремонту" },
-  { id: 2, title: "Генеральне прибирання" },
-  { id: 3, title: "Регулярне прибирання" },
-  { id: 4, title: "Мийка вікон" },
-]);
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 0;
