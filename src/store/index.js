@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import { computed, reactive, ref, watch } from "vue";
+import feature1 from "../assets/images/features/feature-1.png";
 
 export const useGeneralStore = defineStore("generalStore", () => {
 	const isMenuVisible = ref(false);
@@ -7,7 +8,7 @@ export const useGeneralStore = defineStore("generalStore", () => {
     {
       id: 1,
       text: "Ретельно підібраний персонал",
-      img: ["src/assets/images/features/feature-1.png"],
+      img: [feature1],
       transform: "translateY(0)",
     },
     {
