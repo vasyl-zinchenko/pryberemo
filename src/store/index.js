@@ -14,22 +14,22 @@ export const useGeneralStore = defineStore("generalStore", () => {
       id: 2,
       text: "Якісна еко-хімія",
       img: [
-        "src/assets/images/features/feature-2_1.png",
-        "src/assets/images/features/feature-2_2.png",
-        "src/assets/images/features/feature-2_3.png",
+        "../assets/images/features/feature-2_1.png",
+        "../assets/images/features/feature-2_2.png",
+        "../assets/images/features/feature-2_3.png",
       ],
       transform: "translateY(30px)",
     },
     {
       id: 3,
       text: "Контролюємо якість",
-      img: ["src/assets/images/features/feature-3.png"],
+      img: ["../assets/images/features/feature-3.png"],
       transform: "translateY(60px)",
     },
     {
       id: 4,
       text: "Працюємо цілодобово",
-      img: ["src/assets/images/features/feature-4.png"],
+      img: ["../assets/images/features/feature-4.png"],
       transform: "translateY(90px)",
     },
   ]);
