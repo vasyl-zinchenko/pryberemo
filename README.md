@@ -7,5 +7,5 @@ The site was created using:
 - Vue 3 Composition API
 - html, scss
 
-<p><img src="https://i.ibb.co/Y0t7Vww/redlab.jpg"></p>
+<p><img src=""></p>
 
