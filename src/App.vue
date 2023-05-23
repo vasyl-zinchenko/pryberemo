@@ -13,7 +13,7 @@ import OrderCall from "./components/OrderCall.vue"
   <Features />
   <CleaningSection />
   <TheFooter />
-	<OrderCall />
+  <OrderCall />
 </template>
 
 <style scoped></style>
