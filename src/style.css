@@ -1,0 +1,62 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: TT Travels;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+#app {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "TT Travels";
+  src: url("./fonts/TTTravels/TTTravels-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "TT Travels";
+  src: url("./fonts/TTTravels/TTTravels-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "TT Travels";
+  src: url("./fonts/TTTravels/TTTravels-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "TT Travels";
+  src: url("./fonts/TTTravels/TTTravels-DemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "TT Travels";
+  src: url("./fonts/TTTravels/TTTravels-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
